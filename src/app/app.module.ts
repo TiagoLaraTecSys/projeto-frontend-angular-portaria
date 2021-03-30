@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LeftMenuModule} from './left-menu/left-menu.module';
+import { RegistersComponent } from './pages/registers/registers.component';
+import { UserManagementComponent } from './pages/user-management/user-management.component';
 
 @NgModule({
   declarations: [

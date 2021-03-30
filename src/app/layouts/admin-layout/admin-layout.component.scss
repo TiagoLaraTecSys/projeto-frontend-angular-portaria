@@ -9,14 +9,15 @@
 }
 
 .main-painel{
-      position:relative;
+      position:static;
       float: right;
-      width: calc(100%-260px);
+      width: calc(100% - 240px);
       background-color: #f4f3ef;
-      
+      padding-left: -15px;
+      padding-right: -15px;
       .content{
-        padding:0 30px 30px;
-        min-height: calc(100vh - 123px);
-        margin-top: 93px;
+        padding:0 30px 30px 30px;
+        min-height: 100vh;
+        margin-top: 10px;
       }
 }

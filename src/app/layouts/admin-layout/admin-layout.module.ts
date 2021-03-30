@@ -7,6 +7,8 @@ import {  AdminLayoutRoutes } from './admin-layout.routing';
 
 import {  DashboardComponent }    from '../../pages/dashboard/dashboard.component';
 import {  NewRegisterComponent }  from '../../pages/new-register/new-register.component';
+import { RegistersComponent }     from '../../pages/registers/registers.component';
+import { UserManagementComponent }         from '../../pages/user-management/user-management.component';
 
 import {  NgbModule  } from '@ng-bootstrap/ng-bootstrap';
 
@@ -19,7 +21,9 @@ import {  NgbModule  } from '@ng-bootstrap/ng-bootstrap';
   ],
   declarations: [
     DashboardComponent,
-    NewRegisterComponent
+    NewRegisterComponent,
+    RegistersComponent,
+    UserManagementComponent
   ]
 })
 

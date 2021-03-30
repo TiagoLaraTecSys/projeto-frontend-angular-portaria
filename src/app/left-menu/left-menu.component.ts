@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Logger } from '../../services/logger.service';
-
+import '../../assets/icons/home-icon.svg';
 //objeto com as informações da página que se quer navegar pelas opções do leftMenu
 export interface RouteInfo {
   path: string;
@@ -10,16 +10,16 @@ export interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-  { path: '/dashboard', title:'Início',  icon: 'nc-bank', class:''},
-  { path: '/historicRegister', title:'Registro de Entradas', icon: 'nc-as', class:''},
-  { path: '/new-register' , title:'Nova Entrada', icon: 'nc-as', class:''},
-  { path: '/userManagement', title: 'Gerenciamento de Usuários', icon:'nc-as', class:''}
+  { path: '/dashboard', title:'Início',  icon: '../../assets/icons/home-icon.svg', class:''},
+  { path: '/historicRegister', title:'Registro de Entradas', icon: '../../assets/icons/registers.svg', class:''},
+  { path: '/new-register' , title:'Nova Entrada', icon: '../../assets/icons/new-register-icon.svg', class:''},
+  { path: '/userManagement', title: 'Gerenciamento de Usuários', icon:'../../assets/icons/user-management-icon.svg', class:''}
 ]
 @Component({
   moduleId: module.id,
   selector: 'app-left-menu',
   templateUrl: './left-menu.component.html',
-  styleUrls: ['./left-menu.component.css']
+  styleUrls: ['./left-menu.component.scss']
 })
 export class LeftMenuComponent implements OnInit {
 
