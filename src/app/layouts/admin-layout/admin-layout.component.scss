@@ -1,0 +1,22 @@
+.wrapper{
+  position: relative;
+  top: 0;
+  height:100vh;
+}
+
+.sidebar{
+  overflow-x: hidden;
+}
+
+.main-painel{
+      position:relative;
+      float: right;
+      width: calc(100%-260px);
+      background-color: #f4f3ef;
+      
+      .content{
+        padding:0 30px 30px;
+        min-height: calc(100vh - 123px);
+        margin-top: 93px;
+      }
+}

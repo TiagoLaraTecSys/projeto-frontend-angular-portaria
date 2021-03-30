@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/server/login.service';
+import { LoginService } from 'src/services/login.service';
+import { Logger } from '../services/logger.service';
 
 @Component({
   selector: 'app-root',
@@ -11,16 +12,26 @@ export class AppComponent implements OnInit {
 
   title = 'MyFirstAngularProject';
 
-  constructor(private service: LoginService){
+  message= 'I\'m read only';
+  canEdit = false;
+  count = 0;
+
+  onEditClick(){
+    this.canEdit = !this.canEdit;
+
+    this.message = this.canEdit ? "You can edit me!" : "I'm read only!"
+  }
+
+  constructor(){
     
   }
-  logging(){
-    this.service.logging();
-  };
 
   ngOnInit(): void {
-    
-    this.logging();
+
+    throw new Error("Method not implemented.");
+  }
+  sayHello(){
+    console.log('Olá console')
   }
 
 

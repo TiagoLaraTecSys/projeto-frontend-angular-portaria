@@ -12,9 +12,14 @@ export class LoginService{
     constructor(private httpCliente: HttpClient){}
 
     logging(): Observable<any>{
-        
+
         let body = {email: 'laratecsys@gmail.com', senha: '1234'};
-        return this.httpCliente.post<Object>(this.url + `/login`, body)
         console.log('testando consumo de API');
+        return this.httpCliente.post<Response>(this.url + `/login`, body)
+        
     }
+}
+
+export class Response{
+    authToken: string;   
 }
