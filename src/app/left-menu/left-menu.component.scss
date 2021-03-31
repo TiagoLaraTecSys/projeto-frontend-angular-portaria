@@ -16,31 +16,47 @@ ul{
 }
 
 
-li{
-  padding: 10px 0px;
-}
-li:hover{
-  background-color:var(--primary-blue);
-}
-
 p{
   padding: 0 10px;
 }
+li{
+  padding: 10px 0px;
 
-a{
+    > a{
   
-  padding: 0 20px;
-  color:white;
-  text-decoration: none;
-  display: flex;
-  justify-content: left;
-  
-  &:hover{
-    background-color:white;
-    color: var(--primary-blue);
-    
-    svg{
-      fill: var(--primary-blue);
+    padding: 0 20px;
+    color:white;
+    text-decoration: none;
+    display: flex;
+    justify-content: left;
+    opacity: 0.7;
+    &:hover:not(.active),
+    &:focus:not(.active){
+      background-color:white;
+      color: var(--primary-blue);
+      transition: 0.3s;
+      .mat-icon{
+        color: var(--primary-blue);
+      }
     }
   }
+
+  &.active > a,
+  &.active > a > svg {
+    opacity: 1;
+    background-color:white;
+    color: var(--primary-blue);
+    transition: 0.3s;
+  }
+
+  &:hover:not(.active) > a,
+  &:focus:not(.active) > a{
+    opacity: 1;
+    background-color:white;
+    color: var(--primary-blue);
+    transition: 0.3s;
+  }
+}
+.mat-icon{
+  height: auto;
 }
